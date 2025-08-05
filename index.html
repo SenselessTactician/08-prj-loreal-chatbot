@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oréal AI Product Advisor</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,14 +19,24 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <div class="logo-container">
+          <div class="logo">L'O</div>
+          <div>
+            <h1 class="site-title">L'Oréal AI Product Advisor</h1>
+            <p class="site-subtitle">Discover your perfect beauty routine</p>
+          </div>
+        </div>
       </header>
 
       <!------- Chat Area ------->
       <main>
         <section class="chatbox">
           <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
+            <div class="welcome-message">
+              <div class="welcome-icon">✨</div>
+              <h3>Welcome to L'Oréal AI Beauty Advisor!</h3>
+              <p>I'm here to help you discover the perfect products for your beauty routine. Ask me about makeup, skincare, haircare, or fragrances!</p>
+            </div>
           </div>
 
           <form id="chatForm" class="chat-form">
@@ -35,7 +45,7 @@
               id="userInput"
               name="userInput"
               type="text"
-              placeholder="Ask me about products or routines…"
+              placeholder="Ask me about L'Oréal products, routines, or recommendations..."
               autocomplete="off"
               required
             />
@@ -49,18 +59,17 @@
 
       <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>&copy; 2025 L'Oréal. All rights reserved.</p>
         <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
+          <a href="#" onclick="return false;">Privacy Policy</a>
+          <a href="#" onclick="return false;">Terms of Use</a>
+          <a href="#" onclick="return false;">Contact</a>
         </nav>
       </footer>
     </div>
 
-    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
+    <!-- Remove secrets.js when using Cloudflare Workers -->
+    <!-- <script src="secrets.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>
